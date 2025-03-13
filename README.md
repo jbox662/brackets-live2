@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Tournament Bracket Generator
 
 ## Flow
@@ -69,3 +70,6 @@
 - **Notifications**: Consider implementing a notification system to keep users informed about upcoming matches, tournament results, and other important updates.
 - **Link or QR Code to registration page**: When the owner of the tournament start registration, they should be able to send a link or QR code in a promotional post, and users can fill in the form.
 - **Blog** - Consider to implement something like blog posts on the main page of the tournament
+=======
+# brackets-live2
+>>>>>>> origin/main
