@@ -1,0 +1,175 @@
+@import "../../colors.scss";
+
+.player-details-container {
+  max-width: 650px;
+  width: 95%;
+  background-color: $color-box-background;
+  margin: 0 auto;
+  border-radius: 24px;
+  padding: 32px 40px;
+
+  .player-details__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $color-text;
+    margin-bottom: 20px;
+
+    .header-container {
+      display: flex;
+      align-items: center;
+
+      .header__icon {
+        width: 70px;
+        height: 70px;
+        background-color: $color-background;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 35px;
+        border: 1px solid $color-link;
+        margin-right: 20px;
+
+        .MuiSvgIcon-root {
+          color: $color-link;
+          font-size: 30px;
+        }
+      }
+
+      .header__item-title {
+        font-size: 20px;
+      }
+
+      .header__item-value {
+        color: $color-link;
+        font-size: 14px;
+      }
+    }
+
+    .MuiButtonBase-root {
+      background-color: $color-primary;
+      color: $color-background;
+      border: none;
+      border-radius: 24px;
+      padding: 8px 22px;
+      font-weight: bold;
+      margin: 20px 0;
+
+      &:hover {
+        background-color: $color-primary;
+      }
+    }
+  }
+
+  .player-details__stats {
+    .MuiButtonBase-root {
+      background-color: $color-primary;
+      color: $color-background;
+      border: none;
+      border-radius: 24px;
+      padding: 8px 22px;
+      font-weight: bold;
+
+      &:hover {
+        background-color: $color-primary;
+      }
+    }
+
+    .stats__second-box {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+    }
+
+    .stats__third-box {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .fixture-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $color-background;
+    border-radius: 12px;
+    margin-top: 8px;
+    padding: 20px;
+    font-size: 14px;
+
+    .fixture-box__score {
+      display: flex;
+
+      .fixture-box__player {
+        font-weight: bold;
+
+        span {
+          margin: 0 14px;
+        }
+
+        &.active {
+          color: $color-primary;
+        }
+      }
+    }
+  }
+
+  .stats__item {
+    min-width: 200px;
+    margin: 8px 0px;
+
+    .stats__item-key {
+      color: $color-link;
+      font-weight: bold;
+    }
+  }
+
+  .delimeter {
+    color: $color-link;
+  }
+
+  .win {
+    color: $color-win;
+  }
+
+  .draw {
+    color: $color-draw;
+  }
+
+  .loss {
+    color: $color-loss;
+  }
+}
+
+@media (min-width: 600px) {
+  .player-details-container {
+    .player-details__header {
+      flex-direction: row;
+      padding-bottom: 20px;
+
+      .MuiButtonBase-root {
+        margin: 0;
+      }
+    }
+
+    .player-details__stats {
+      .stats__second-box {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .stats__third-box {
+        display: flex;
+        flex-direction: row;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .player-details-container {
+    width: 100%;
+  }
+}

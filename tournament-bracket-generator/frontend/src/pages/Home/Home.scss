@@ -1,0 +1,127 @@
+@import "../../colors.scss";
+
+.home-container {
+  max-width: 1024px;
+  width: 95%;
+  margin: 0 auto;
+
+  .home-top {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    .home__text {
+      margin-bottom: 18px;
+
+      .home__title {
+        margin-bottom: 8px;
+      }
+
+      .home__description {
+        color: $color-link;
+        font-weight: bold;
+      }
+    }
+
+    .home__image-container {
+      .home__image {
+        max-width: 400px;
+        max-height: 500px;
+        height: 100%;
+        width: 100%;
+        border-radius: 30px;
+      }
+    }
+  }
+
+  .home__features {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+
+    .home__feature__image-container {
+      .home__features__image {
+        max-width: 400px;
+        max-height: 500px;
+        height: 100%;
+        width: 100%;
+        border-radius: 30px;
+      }
+    }
+
+    .home__features-content {
+      margin-bottom: 18px;
+
+      .home__features-title {
+        text-align: center;
+      }
+
+      .home__features-list {
+        margin-top: 18px;
+        list-style-type: none;
+
+        li {
+          margin: 8px 0;
+        }
+      }
+    }
+  }
+
+  .home__cta-container {
+    text-align: center;
+
+    .home__cta-button {
+      background-color: $color-primary;
+      border-radius: 30px;
+      padding: 12px 24px;
+      font-weight: bold;
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  .home-container {
+    .home-top {
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+      .home__text {
+        text-align: left;
+        flex: 1;
+      }
+
+      .home__image-container {
+        flex: 2;
+
+        .home__image {
+          max-width: 475px;
+        }
+      }
+    }
+
+    .home__features {
+      flex-direction: row;
+      justify-content: center;
+
+      .home__feature__image-container {
+        flex: 2;
+        width: 100%;
+        text-align: center;
+
+        .home__features__image {
+          max-width: 475px;
+        }
+      }
+
+      .home__features-content {
+        flex: 1;
+        width: 100%;
+
+        .home__features-title {
+          text-align: left;
+        }
+      }
+    }
+  }
+}

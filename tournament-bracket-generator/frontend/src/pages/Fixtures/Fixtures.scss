@@ -1,0 +1,107 @@
+@import "../../colors.scss";
+
+.fixtures-container {
+  max-width: 1024px;
+  width: 95%;
+  margin: 0 auto;
+
+  .fixture-filters {
+    display: flex;
+    overflow-x: auto;
+    margin: 20px 0;
+
+    .button {
+      color: $color-text;
+      font-weight: bold;
+      border: 1px solid $color-text;
+      border-radius: 24px;
+      flex: 0 0 auto;
+
+      &.active {
+        background-color: $color-primary;
+        color: $color-background;
+        border: 1px solid $color-primary;
+      }
+
+      &:not(:last-child) {
+        margin-right: 12px;
+      }
+    }
+  }
+
+  .fixture-container {
+    .fixture {
+      background-color: $color-box-background;
+      font-weight: bold;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      padding: 16px 22px;
+
+      .fixture__header {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .fixture__score {
+        margin: 20px 0;
+        font-size: 18px;
+
+        .player {
+          display: flex;
+          align-items: center;
+
+          &:nth-child(1) {
+            margin-bottom: 12px;
+          }
+
+          .player__name {
+            max-width: 175px;
+            width: 100%;
+          }
+
+          .player__goals-1st {
+            min-width: 20px;
+            text-align: center;
+          }
+
+          .player__goals-2nd {
+            color: $color-link;
+            margin-left: 10px;
+            font-size: 14px;
+          }
+
+          &.active {
+            color: $color-primary;
+          }
+        }
+      }
+
+      .item {
+        .item__name {
+          color: $color-link;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 750px) {
+  .fixtures-container {
+    .fixture-container {
+      display: flex;
+      flex-wrap: wrap;
+
+      .fixture {
+        margin-right: 8px;
+        max-width: calc(50% - 8px);
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (min-width: 1100px) {
+  .fixtures-container {
+    width: 100%;
+  }
+}

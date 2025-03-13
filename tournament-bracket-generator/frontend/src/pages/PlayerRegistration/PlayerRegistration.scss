@@ -1,0 +1,90 @@
+@import "../../colors.scss";
+
+.registration-container {
+  max-width: 600px;
+  width: 95%;
+  margin: 0 auto;
+  background-color: $color-box-background;
+  border-radius: 24px;
+  padding: 24px 30px;
+  text-align: center;
+
+  .registration__done-icon {
+    color: $color-background;
+    background-color: $color-primary;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    border-radius: 100%;
+  }
+
+  .registration__title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .registration__description {
+    margin-bottom: 20px;
+  }
+
+  .registration__home-button {
+    background-color: $color-primary;
+    border-radius: 30px;
+    padding: 12px 24px;
+    font-weight: bold;
+    max-width: 200px;
+    width: 100%;
+
+    &:hover {
+      background-color: $color-primary;
+    }
+  }
+
+  .registration__inputs-container {
+    display: flex;
+    flex-direction: column;
+
+    .input-container {
+      position: relative;
+
+      .input {
+        background-color: $color-background;
+      }
+
+      .text-error {
+        color: $color-loss;
+        font-size: 12px;
+      }
+
+      .MuiSvgIcon-root {
+        position: absolute;
+        top: 17px;
+        right: 14px;
+        color: $color-loss;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+
+    .registration__submit-button {
+      background-color: $color-primary;
+      border-radius: 30px;
+      padding: 12px 24px;
+      font-weight: bold;
+      max-width: 200px;
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .registration-container {
+    width: 100%;
+  }
+}
